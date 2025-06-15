@@ -11,7 +11,7 @@ There is also an [online version](https://nicze.de/philipp/puder/), which is the
 
 You need Python (I used Python 3.12.8, other recent version should also work). You don't need a GPU (unless you want to do training). This model is tiny and can easily do inference on the CPU.
 
-You also need the source code, model weights, and some data. The easiest way to get all of that is to download a release.
+You also need the source code, model weights, and some data. The easiest way to get all of that is to download a [release](https://github.com/suyjuris/puder/releases).
 
 Then do something like the following:
 
@@ -33,10 +33,10 @@ You should now be able to access the UI at http://localhost:31180/ .
 
 ## Training
 
-(I have not validated the following. Beware.)
+Please beware, this is not very usable outside of my machine and you will likely have to reverse-engineer and fix some things.
 
 * You probably want a GPU.
 * You then need a version of PyTorch with hardware acceleration. See [here](https://pytorch.org/get-started/locally/) for instructions.
-* Download the [public 17Lands datasets](https://www.17lands.com/public_datasets), and convert them to tensors using `csv_to_tensor.cpp`.
-* Install the other required packages in the same way as above.
+* Download the [public 17Lands datasets](https://www.17lands.com/public_datasets), and convert them to tensors using `csv_to_tensor.cpp`. You'll need [philib](https://github.com/suyjuris/philib) and [libdeflate](https://github.com/ebiggers/libdeflate/tree/master) to compile it.
+* Install the other required packages in the same way as for inference.
 * Runnning `python draftpredict.py train` should then create and train a new model.
