@@ -1,0 +1,9 @@
+torch
+schedulefree
+tensorboard
+pydantic
+lxml
+hsluv
+nevergrad
+requests
+pillow

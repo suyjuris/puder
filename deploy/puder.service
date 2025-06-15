@@ -1,0 +1,41 @@
+[Unit]
+Description=puder - a MTG draft prediction AI
+After=network.target
+
+[Service]
+Type=simple
+User=puder
+Group=puder
+WorkingDirectory=/opt/puder
+ExecStart=/opt/puder/start.sh
+Restart=no
+
+# Security restrictions
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+RestrictNamespaces=true
+LockPersonality=true
+RemoveIPC=true
+
+# File system access
+ReadWritePaths=/opt/puder/cache /opt/puder/save
+ReadOnlyPaths=/opt/puder
+
+# Capabilities
+CapabilityBoundingSet=
+AmbientCapabilities=
+
+# System calls
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+
+[Install]
+WantedBy=multi-user.target

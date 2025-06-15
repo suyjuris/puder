@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="res/view.css" rel="stylesheet">
+    <title>MTG Draft Prediction</title>
+    <script src="res/index.js"></script>
+  </head>
+  <body>
+    <div class="index-container">
+      <h1>puder — MTG Draft Prediction</h1>
+      
+      <div class="index-section">
+        <h2>Create Empty Draft</h2>
+        <form id="create-draft-form" class="create-form">
+          <div class="form-group">
+            <label for="expansion-select">Set:</label>
+            <select id="expansion-select" name="expansion" required>
+              <option value="">Select a set...</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="create-btn">Create Draft</button>
+        </form>
+      </div>
+      
+      <div class="index-section">
+        <h2>Load Random Draft</h2>
+        <p>Load a random draft from the testing data</p>
+        <form id="load-random-form" class="create-form">
+          <button type="submit" class="load-random-btn">Load Random Draft</button>
+        </form>
+      </div>
+
+      <div class="index-section">
+        <h2>Import Draft</h2>
+        <p>Import a draft from 17lands. Copy-paste the 'Draft' link from your event history.</p>
+        <form id="import-draft-form" class="create-form">
+          <div class="form-group">
+            <label for="link-input">Link:</label>
+            <input type="text" id="link-input" name="link" required size="10" placeholder="https://www.17lands.com/draft/..."/>
+          </div>
+          <button type="submit" class="import-btn">Import Draft</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

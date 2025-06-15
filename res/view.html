@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="res/view.css" rel="stylesheet">
+    <title>Draft</title>
+    <script src="res/view.js"></script>
+  </head>
+  <body>
+    <div class="navigation">
+      [<a href=".">back</a>]
+    </div>
+    <div id="card-preview" class="card-preview">
+      <img id="preview-img" src="" alt="Card Preview">
+    </div>
+    <div id="card-add-modal" class="card-add-modal">
+      <div class="modal-content">
+        <h2>Add Cards to Pack</h2>
+        <p>Enter collector numbers or card names below, one per line:</p>
+        <form id="card-add-form">
+          <textarea id="card-input-area" class="card-input-area" placeholder="5&#10;107&#10;Dazzling Angel&#10;Stab"></textarea>
+          <div class="buttons">
+            <button type="button" id="close-modal-btn" class="cancel">Cancel</button>
+            <button type="button" id="submit-cards-btn" class="submit">Add Cards</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
